@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -75,13 +79,37 @@ WSGI_APPLICATION = 'methacks.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+DB_NAME = os.environ.get("DB_NAME") #database name
+DB_HOST = os.environ.get("DB_HOST") # database host
+DB_USERNAME = os.environ.get("DB_USERNAME") # database username
+DB_PASSWORD = os.environ.get("DB_PASSWORD") # database user password
 
+MONGO_READY = (
+    DB_NAME is not None
+    and DB_HOST is not None
+    and DB_USERNAME is not None
+    and DB_PASSWORD is not None
+)
+
+print(f"MongoDB ready: {MONGO_READY}")
+
+if MONGO_READY:
+    DATABASE = {
+        'default': {
+            'ENGINE': 'djongo',
+            "CLIENT": {
+            "name": os.getenv('DB_NAME'),
+            "host": os.getenv('DB_HOST'),
+            "username": os.getenv('DB_USERNAME'),
+            "password": os.getenv('DB_PASSWORD'),
+            "authMechanism": "SCRAM-SHA-1",
+            }, 
+        }
+    }
+
+
+
+AUTH_USER_MODEL = 'api.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
