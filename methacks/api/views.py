@@ -23,7 +23,7 @@ import warnings
 warnings.filterwarnings('ignore')
 pd.set_option('display.max_colwidth', None)
 
-api_key = ''
+api_key = 'OZ5zCzwnOA8IYRGRA22RZbl0ZeyX9rKRPg1e8gYQ'
 co = cohere.Client(api_key)
 headers = {"Authorization": f"Bearer {api_key}"}
 # Create your views here.
@@ -58,18 +58,31 @@ def main(request):
     #embeds = co.embed(texts=[leetcode_answer, written_answer], model='small', truncate='LEFT').embeddings
     # compare answers using text similarity
 
-    text_similarity_endpoint = "https://api.cohere.ai/v1/text/similarity"
     payload = [leetcode_answer, written_answer]
-    #response = requests.post(text_similarity_endpoint, headers=headers, json=payload)
-    text1 = co.embed([leetcode_answer]).embeddings
-    text2 = co.embed([written_answer]).embeddings
-    #similarity_score = np.dot(text1, text2) / (np.linalg.norm(text1) * np.linalg.norm(text2))
-# compare them
+    (text1, text2) = co.embed(payload).embeddings
+    # compare them
     def calculate_similarity(a, b):
         return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
-    print(calculate_similarity(text1, text2)) # 0.9 - very similar!
-    #print(np.dot(text1[0], text2[0]))
+    o = calculate_similarity(text1, text2)
+    print(o)
+    '''
+    embeds = co.embed(texts=[leetcode_answer, written_answer], model='small', truncate='LEFT').embeddings
+    search_index = AnnoyIndex(embeds.shape[1], 'angular')
+    for i in range(len(embeds)):
+        search_index.add_item(i, embeds[i])
+    search_index.build(10)
+    search_index.save('test.ann')
+
+    example_id = 92
+    similar_item_ids = search_index.get_nns_by_item(example_id, 10, include_distances=True)
+    results =zzzzzz
+    
+    doc_embeds = co.embed(texts=[leetcode_answer], model="small")
+    query = [written_answer]
+    query_embed=co.embed(text=[query], model="large")
+    print(query_embed)
+    '''
     return HttpResponse("Hello")
 
 
