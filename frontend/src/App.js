@@ -1,14 +1,9 @@
-import SpeechToText from "./components/SpeechToText";
+import Routes from "./Routes";
 
 function App() {
-  const timeLimit = 180000;
-  const testLimit = 10000;
 
   return (
-    <div>
-      <h1>Hello World!</h1>
-      <SpeechToText timeLimit={timeLimit} />
-    </div>  
+    <Routes />  
   );
 }
 
