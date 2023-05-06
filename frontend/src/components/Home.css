@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../../public/fonts/Lexend/static/Lexend-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: #f9f7f7;
+}
+
+.brown-rect-mask{
+  background: #f9f7f7;
+  position: relative;
+  mask-image: linear-gradient(to bottom left, transparent 50%, black 50%);
+}
+
+.brown-rect{
+    background: #3c3737;
+}
+
+.peopleWorking-layer1{
+    margin-left: 35%;
+    transform: translateY(85%);
+    max-width: 50%;
+    height: auto;
+}
+
+.peopleWorking-layer2{
+    position: relative;
+    margin-left: 35%;
+    transform: translateY(-16%);
+    max-width: 50%;
+    height: auto;
+}
