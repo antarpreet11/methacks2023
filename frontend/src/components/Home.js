@@ -10,19 +10,17 @@ const Home = () => {
     <div>
       <div class="navbar">
         <button class="navbar-button">Sign in</button>
-        <div>
-          <img class="logo" src={logo} alt="Logo" />
-        </div>
+        <img src={logo} alt="logo" />
       </div>
 
       {/*brown rectangle thing with a masked white rectangle (slices)
       and the People Working image is actually 2 images carefully layered*/}
       <div class="brown-rect">
         <div class="name">
-          <h1 class="title">Co:here</h1>
+          <h1 class="title">uPrep</h1>
         </div>
 
-        <h1 class="title">A new way to interview</h1>
+        <h1 class="title">a new way to interview</h1>
         <img class="peopleWorking-layer1" src={peopleWorking} alt="People working together" />
 
         <div class="brown-rect-mask">
