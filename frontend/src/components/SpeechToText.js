@@ -30,8 +30,8 @@ const SpeechToText = ({ timeLimit }) => {
     };
   }, [timeLimit, isRecording]);
 
-  const submit_voice_record = () => {
-    const submitText = finalText;
+  const submit_voice_record = (recordedText) => {
+    const submitText = recordedText;
 
     fetch("http://localhost:8000/classify/",
     {
