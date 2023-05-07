@@ -3,12 +3,16 @@ import "./Home.css";
 import peopleWorking from './peopleWorking.png';
 import guyWorking from './guyWorking.png'
 import cohereLogo from './cohereLogo.png'
+import logo from './logo.png'
 
 const Home = () => {
   return (
     <div>
       <div class="navbar">
         <button class="navbar-button">Sign in</button>
+        <div>
+          <img class="logo" src={logo} alt="Logo" />
+        </div>
       </div>
 
       {/*brown rectangle thing with a masked white rectangle (slices)
