@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from rest_framework import generics
+from rest_framework import generics, status
 from .models import User
 import cohere 
 import json
@@ -24,6 +24,8 @@ from django.http import JsonResponse
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from django.contrib.auth import authenticate
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 warnings.filterwarnings('ignore')
 pd.set_option('display.max_colwidth', None)
@@ -35,6 +37,11 @@ User = get_user_model()
 # Create your views here.
 
 # view list of all diff rooms
+class problem_view(APIView):
+    def post(self, request, format=None):
+        if not self.request.session.exists(self.request.session.session):
+            self.request.session.create()
+        return HttpResponse("Hello")
 
 def main(request):
     def preprocess(text):
