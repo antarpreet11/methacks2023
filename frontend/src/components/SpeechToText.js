@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import SpeechRecognitionService from '../utils/SpeechRecognitionService';
-import "./Assess.css";
-
-import mic from './mic.png'
-
 const SpeechToText = ({ timeLimit }) => {
   const [liveText, setLiveText] = useState('');
   const [isRecording, setIsRecording] = useState(true);
@@ -29,6 +25,33 @@ const SpeechToText = ({ timeLimit }) => {
     };
   }, [timeLimit, isRecording]);
 
+  useEffect(() => {
+    if (finalText) {
+      submit_voice_record();
+    }
+  }, [finalText]);
+
+  const submit_voice_record = () => {
+    const submitText = finalText;
+
+    fetch("http://localhost:8000/classify/",
+    {
+      mode: 'no-cors',
+      method : "POST",
+      body: JSON.stringify({
+        text: submitText,
+      }),
+      headers: {"Content-Type": "application/json"},
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response data
+        console.log(data.prediction);
+        console.log(data.confidence);
+      })
+      .catch(error => console.error(error));
+  };
+
   const handleStopRecording = () => {
     setIsRecording(false);
   };
@@ -37,11 +60,11 @@ const SpeechToText = ({ timeLimit }) => {
     <div>
       <h2>Live Text:</h2>
       <p>{liveText}</p>
-      {isRecording && <img class="mic" src={mic} alt="microphone"/> && <p><b>Recording in Progresss:</b> click mic to stop recording</p>}
+      {isRecording && <p>Recording...</p>}
       {!isRecording && <p>Recording stopped.</p>}
-      {isRecording && <button onClick={handleStopRecording}><img class="mic" src={mic} alt="microphone"/></button>}
+      {isRecording && <button onClick={handleStopRecording}>Stop Recording</button>}
       {!isRecording && (
-        <div class="result">
+        <div>
           <h2>Final Text:</h2>
           <p>{finalText}</p>
         </div>
