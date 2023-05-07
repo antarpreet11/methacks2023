@@ -45,8 +45,7 @@ const SpeechToText = ({ timeLimit }) => {
       .then(response => response.json())
       .then(data => {
         // Handle the response data
-        console.log(data.prediction);
-        console.log(data.confidence);
+        console.log(data.score);
       })
       .catch(error => console.error(error));
   };
