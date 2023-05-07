@@ -12,10 +12,10 @@ Object.entries(data).forEach(([slug, explanation]) => {
   // Set the label based on the slug
   let label = '';
 
-  if (slug == 'two-sum') {
-    label = 'true';
+  if (slug.includes('two-sum')) {
+    label = 'right';
   } else {
-    label = 'false';
+    label = 'wrong';
   }
 
   // Append to the CSV string
