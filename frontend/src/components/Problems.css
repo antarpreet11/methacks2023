@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../public/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+body {
+    background-color: #f9f7f7;
+}
+
+.image {
+    width: 25%;
+    height: auto;
+    margin-left: 5%;
+}
+
+.logo{
+    width: 40%;
+    height: auto;
+    margin-left: 2%;
+    margin-bottom: 4%;
+}
+  
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Poppins";
+    color: white;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #6BCEB6;
+  }
+
+  .sidenav-profile{
+    background-color: #6BCEB6;
+    color: #3C3737;
+    bottom: 0;
+    padding: 5%;
+    position: absolute;
+  }
+  
+
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+
