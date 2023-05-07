@@ -66,8 +66,19 @@ def getClassification(request):
         prediction = response.classifications[0].prediction
         confidence = response.classifications[0].confidence
 
-        return JsonResponse({'prediction': prediction, 'confidence': confidence})
+        score = getScore(prediction, confidence)
+
+        return JsonResponse({'score': score})
     return JsonResponse({'error': 'Invalid request method'}, status=405)
+
+def getScore(pred, conf): 
+    confidence = 0
+    if pred == ' right':
+        confidence = min((conf * 140), 90)
+    else:
+        confidence = max((1 - conf) * 50, 20)
+    
+    return confidence
 
 @csrf_exempt
 def signup_view(request):

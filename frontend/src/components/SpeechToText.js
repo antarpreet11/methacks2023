@@ -26,8 +26,29 @@ const SpeechToText = ({ timeLimit }) => {
       const recordedText = speechRecognition.getFinalText();
       setFinalText(recordedText);
       speechRecognition.stopRecording();
+      submit_voice_record(recordedText);
     };
   }, [timeLimit, isRecording]);
+
+  const submit_voice_record = () => {
+    const submitText = finalText;
+
+    fetch("http://localhost:8000/classify/",
+    {
+      mode: 'no-cors',
+      method : "POST",
+      body: JSON.stringify({
+        text: submitText,
+      }),
+      headers: {"Content-Type": "application/json"},
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response data
+        console.log(data.score);
+      })
+      .catch(error => console.error(error));
+  };
 
   const handleStopRecording = () => {
     setIsRecording(false);

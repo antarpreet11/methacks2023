@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SignIn.css";
+import { Link } from "wouter";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -12,12 +13,12 @@ function SignIn() {
   };
 
   return (
-    <div class="signin-container">
+    <div className="signin-container">
       <div>
         <h1>Sign In</h1>
         <h6>Sign in to practice your interview game</h6>
       </div>
-    <div class = "form-container">
+    <div className = "form-container">
       <form onSubmit={handleSubmit}>
       <label>
         <input
@@ -35,7 +36,9 @@ function SignIn() {
         />
       </label>
       <br />
-      <button type="submit">Sign in</button>
+      <Link to="/problems">
+        <button type="submit">Sign in</button>
+      </Link>
     </form>
     </div> 
     </div>
