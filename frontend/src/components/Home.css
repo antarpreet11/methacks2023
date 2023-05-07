@@ -7,18 +7,24 @@ body {
     background-color: #f9f7f7;
 }
 
+.navbar img{
+    width: 120px;
+    height: auto;
+    position: absolute;
+    left: 0;
+}
+
 .navbar{
     background: #3c3737;
     text-align: right;
 }
 
 .navbar-button{
-    background: #63CAB1;
     border-radius: 36px;
+    font-family: 'Lexend Deca';
     text-align: center;
-    margin-top: 10px;
-    margin-right: 10px;
-    font-family: 'Inter';
+    margin-top: 2%;
+    margin-right: 2%;
     font-size: 25px;
     line-height: 40px;
     color: #FFFFFF;
@@ -30,8 +36,9 @@ body {
 
 .name{
     position: absolute;
-    margin-left: 45%;
-    margin-top: 5%;
+    margin-left: 7%;
+    top: 0;
+    margin-top: 2%;
 }
 
 .title{ 
