@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SignIn.css";
+import { Link } from "wouter";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -35,7 +36,9 @@ function SignIn() {
         />
       </label>
       <br />
-      <button type="submit">Sign in</button>
+      <Link to="/problems">
+        <button type="submit">Sign in</button>
+      </Link>
     </form>
     </div> 
     </div>

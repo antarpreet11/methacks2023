@@ -9,8 +9,9 @@ import profile from './adam.png'
 import play from './play.png'
 import preview from './premiumPreview.png'
 
+import { Link } from "wouter"
+
 const Problems = () => {
-  const timeLimit = 180000; // 3 minutes
   return (
     <div>
       <div className="sidenav">
@@ -46,7 +47,9 @@ const Problems = () => {
 
         <button className="question">Question #1234
           <div className="score">Best Score: 50%</div>
-          <img src={play} alt="play" />
+          <Link to="/assess">
+            <img src={play} alt="play" />
+          </Link>
         </button>
 
         <button className="question">Question #1234

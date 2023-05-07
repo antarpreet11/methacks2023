@@ -4,12 +4,13 @@ import peopleWorking from './peopleWorking.png';
 import guyWorking from './guyWorking.png'
 import cohereLogo from './cohereLogo.png'
 import logo from './logo.png'
+import { Link } from 'wouter';
 
 const Home = () => {
   return (
     <div>
       <div className="navbar">
-        <button className="navbar-button">Sign in</button>
+        <Link to="/signin"><button className="navbar-button" >Sign in</button></Link>
         <img src={logo} alt="logo" />
       </div>
 
