@@ -1,1 +1,7 @@
-# methacks2023
+#uPrep [MetHacks 2023 Submission]
+
+As the tech industry continues to grow, the number of candidates applying for any given job is increasing exponentially. With so many applicants to choose from, it can be difficult for employers to accurately assess each candidate's qualifications and make informed hiring decisions. In the past, interviewers relied solely on a candidate's technical skills to determine their suitability for a job. However, in today's competitive job market, technical skills are no longer enough to set a candidate apart from the rest. At uPrep, we understand the importance of accurate personality metrics in the tech industry. Our AI-powered platform uses co:here to assess a candidate's soft skills and provide employers with detailed insights into their personality and potential for success.
+
+Our team utilized co:here's API to leverage AI technology and assess candidates' technical communication skills, speech flow, and professionalism. To access this tool, users are required to create an account on our platform and start solving posted problems. When the problem prompt is opened, a speech-to-text interface is activated with the question prompt displayed on the screen. The user then answers the question with their voice within a 3-minute time frame. Once the interview is concluded, co:here's API calculates an overall grade for each question and provides constructive feedback to the user.
+
+Learn more about our project [here](https://methacks-2023.devpost.com/)
