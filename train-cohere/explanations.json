@@ -284,5 +284,15 @@
   "three-sum157": "The algorithm uses a Monte Carlo simulation on the 'nums' array, repeatedly sampling three elements and checking if their sum equals the target value.",
   "three-sum158": "Instead of using a hash map, the algorithm creates a binary tree from the 'nums' array and performs a breadth-first search to find three elements that sum up to the target value.",
   "three-sum159": "The algorithm converts the 'nums' array into a trie data structure and searches for three elements in the trie that sum up to the target value.",
-  "three-sum160": "By converting the 'nums' array into a matrix, the algorithm performs matrix operations to find three elements that sum up to the target value." 
+  "three-sum160": "By converting the 'nums' array into a matrix, the algorithm performs matrix operations to find three elements that sum up to the target value.",
+  "three-sum191": "The algorithm utilizes a breadth-first search (BFS) algorithm on the 'nums' array, exploring all possible combinations of three elements to find the desired sum.",
+  "three-sum192": "Instead of using a hash map, the algorithm employs a balanced binary search tree (BST) to store the elements of the 'nums' array and searches for three elements that sum up to the target value.",
+  "three-sum193": "The algorithm converts the 'nums' array into a heap data structure and performs heap operations to find three elements that sum up to the target value.",
+  "three-sum194": "By converting the 'nums' array into a trie data structure, the algorithm performs trie operations to find three elements that sum up to the target value.",
+  "three-sum195": "The algorithm uses a recursive backtracking approach to find all possible combinations of three elements from the 'nums' array that sum up to the target value.",
+  "three-sum196": "Instead of using a hash map, the algorithm creates a set of quadruplets from the 'nums' array and checks if any quadruplet sums up to the target value.",
+  "three-sum197": "The algorithm employs a modified binary search on the sorted 'nums' array to find two elements that sum up to a partial target value, and then searches for a third element that completes the sum.",
+  "three-sum198": "By transforming the 'nums' array into a sparse matrix, the algorithm applies matrix operations to find three elements that sum up to the target value.",
+  "three-sum199": "The algorithm converts the 'nums' array into a graph data structure and performs a depth-first search (DFS) to find three elements that sum up to the target value.",
+  "three-sum200": "Instead of using a hash map, the algorithm creates a priority queue from the 'nums' array and performs priority queue operations to find three elements that sum up to the target value."
 }
