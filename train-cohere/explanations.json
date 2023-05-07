@@ -273,5 +273,16 @@
   "three-sum146": "The algorithm utilizes a divide and conquer approach, where it partitions the 'nums' array into smaller subarrays and checks if the sum of any three elements equals the target value.",
   "three-sum147": "To solve the three-sum problem, the algorithm employs a random sampling technique on the 'nums' array, repeatedly selecting three elements and checking if their sum equals the target value.",
   "three-sum148": "By transforming the 'nums' array into a sparse matrix, the algorithm applies matrix operations to find three elements that sum up to the target value.",
-  "three-sum149": "The algorithm converts the 'nums' array into a trie data structure and searches for three elements in the trie that sum up to the target value."  
+  "three-sum149": "The algorithm converts the 'nums' array into a trie data structure and searches for three elements in the trie that sum up to the target value.",
+  "three-sum150": "The algorithm converts the 'nums' array into a binary search tree and performs an in-order traversal to find three elements that sum up to the target value.",
+  "three-sum151": "To solve the three-sum problem, the algorithm uses a combination of sorting and binary search to find three elements that sum up to the target value.",
+  "three-sum152": "By converting the 'nums' array into a linked list, the algorithm traverses the list and checks if there are three nodes whose values sum up to the target value.",
+  "three-sum153": "The algorithm applies a genetic algorithm to the 'nums' array, evolving a population of solutions until it finds three elements that sum up to the target value.",
+  "three-sum154": "Instead of using a hash map, the algorithm creates a set of triplets from the 'nums' array and checks if any triplet sums up to the target value.",
+  "three-sum155": "The algorithm employs a dynamic programming approach, using memoization to store intermediate results and find three elements that sum up to the target value.",
+  "three-sum156": "By converting the 'nums' array into a stack, the algorithm performs stack operations to find three elements that sum up to the target value.",
+  "three-sum157": "The algorithm uses a Monte Carlo simulation on the 'nums' array, repeatedly sampling three elements and checking if their sum equals the target value.",
+  "three-sum158": "Instead of using a hash map, the algorithm creates a binary tree from the 'nums' array and performs a breadth-first search to find three elements that sum up to the target value.",
+  "three-sum159": "The algorithm converts the 'nums' array into a trie data structure and searches for three elements in the trie that sum up to the target value.",
+  "three-sum160": "By converting the 'nums' array into a matrix, the algorithm performs matrix operations to find three elements that sum up to the target value." 
 }
