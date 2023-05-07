@@ -6,6 +6,8 @@ import dashboard from './dashboard.png'
 import practice from './practice.png'
 import premium from './premium.png'
 import profile from './adam.png'
+import play from './play.png'
+import preview from './premiumPreview.png'
 
 const Problems = () => {
   const timeLimit = 180000; // 3 minutes
@@ -40,9 +42,36 @@ const Problems = () => {
       </div>
 
       <div class="main">
-        <h1>Weekly Problems</h1>
-      </div>
+        <h2>Weekly Problems</h2>
 
+        <button class="question">Question #1234
+          <div class="score">Best Score: 50%</div>
+          <img src={play} alt="play" />
+        </button>
+
+        <button class="question">Question #1234
+          <div class="score">Best Score: 50%</div>
+          <img src={play} alt="play" />
+        </button>
+
+        <button class="question">Question #1234
+          <div class="score">Best Score: 50%</div>
+          <img src={play} alt="play" />
+        </button>
+
+        <button class="question">Question #1234
+          <div class="score">Best Score: 50%</div>
+          <img src={play} alt="play" />
+        </button>
+
+        <button class="question">Question #1234
+          <div class="score">Best Score: 50%</div>
+          <img src={play} alt="play" />
+        </button>
+
+        <img class="preview" src={preview} alt="Preview of Premium questions" />
+
+      </div>
     </div>
   )
 }
