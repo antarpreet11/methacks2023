@@ -12,12 +12,12 @@ function SignIn() {
   };
 
   return (
-    <div class="signin-container">
+    <div className="signin-container">
       <div>
         <h1>Sign In</h1>
         <h6>Sign in to practice your interview game</h6>
       </div>
-    <div class = "form-container">
+    <div className = "form-container">
       <form onSubmit={handleSubmit}>
       <label>
         <input

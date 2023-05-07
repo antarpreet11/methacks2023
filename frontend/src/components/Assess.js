@@ -8,8 +8,7 @@ const Assess = () => {
     const timeLimit = 180000; // 3 minutes
     return (
         <div>
-            <p class="prompt">Tell Me About Yourself</p>
-
+            <p className="prompt">Answer the question</p>
             <SpeechToText timeLimit={timeLimit} />
         </div>
     )
