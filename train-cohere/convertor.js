@@ -19,7 +19,7 @@ Object.entries(data).forEach(([slug, explanation]) => {
   }
 
   // Append to the CSV string
-  csv += `"${explanation.replace(/"/g, '""')}", "${label}"\n`;
+  csv += `"${explanation.replace(/"/g, '""')}"; "${label}"\n`;
 });
 
 // Write CSV to a file
