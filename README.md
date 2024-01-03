@@ -4,4 +4,4 @@ As the tech industry continues to grow, the number of candidates applying for an
 
 Our team utilized co:here's API to leverage AI technology and assess candidates' technical communication skills, speech flow, and professionalism. To access this tool, users are required to create an account on our platform and start solving posted problems. When the problem prompt is opened, a speech-to-text interface is activated with the question prompt displayed on the screen. The user then answers the question with their voice within a 3-minute time frame. Once the interview is concluded, co:here's API calculates an overall grade for each question and provides constructive feedback to the user.
 
-Learn more about our project [here]([https://methacks-2023.devpost.com/](https://devpost.com/software/uprep)https://devpost.com/software/uprep)
+Learn more about our project [here](https://devpost.com/software/uprep)
